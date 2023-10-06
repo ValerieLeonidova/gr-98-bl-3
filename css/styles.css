@@ -260,9 +260,9 @@ li .address:focus {
     justify-content: center;
     height: 112px;
     background-color: #f4f4fd;
+    border: 1px solid #8E8F99;
     border-radius: 4px;
     margin-bottom: 8px;
-    border: 1px solid #8E8F99;
 }
 
 .second-section-item {
