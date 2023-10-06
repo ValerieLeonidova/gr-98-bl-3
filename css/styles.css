@@ -541,6 +541,59 @@ li .address:focus {
     background-color: #31D0AA;
 }
 
+.subscription-form {
+    display: flex;
+    gap: 24px;
+}
+
+.subscription-input-footer {
+    width: 264px;
+    height: 40px;
+    padding-left: 16px;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.subscription-input-footer::placeholder {
+    color: #ffffff;
+}
+
+.subscription-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 165px;
+    height: 40px;
+    padding: 8px 24px;
+    background-color: #4D5AE5;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+
+.subscription-button:hover,
+.subscription-button:focus {
+    background-color: #404BBF;
+    }
+
+.subscription-button .icon-container {
+    fill: #F4F4FD;
+    margin-left: 16px;
+    }
 /*=====================BACKDROP============================*/
 
 .backdrop {
@@ -573,14 +626,38 @@ pointer-events: none;
 }
 
 .modal-btn {
-    background-color: transparent;
-    border: none;
     position: absolute;
-    top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
     right: 24px;
-    width: 28px;
-    height: 28px;
-    
+    top: 24px;
+    background-color: #E7E9FC;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
+.modal-btn-icon {
+    fill: #2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover .modal-btn-icon,
+.modal-btn:focus .modal-btn-icon {
+    fill: #ffffff;
 }
 
 .modal-header {
@@ -673,6 +750,43 @@ textarea:hover {
     font-size: 12px;
 }
 
+.privacy-cont {
+    margin-bottom: 24px;
+}
+
+.privacy-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+}
+
+input[type="checkbox"]+label>span {
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition:
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+}
+
+input[type="checkbox"]:checked+label>span {
+    background-color: #404BBF;
+    border: none;
+    fill: #f4f4fd;
+}
+
+.privacy-link {
+    color: #4d5ae5;
+    text-decoration: underline;
+}
+
 .form-btn {
     width: 169px;
     height: 56px;
@@ -690,4 +804,10 @@ textarea:hover {
     box-shadow: 0px 4px 4px 0px #00000026;
     display: block;
     margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-btn:hover,
+.form-btn:focus {
+    background-color: #404BBF;
 }
