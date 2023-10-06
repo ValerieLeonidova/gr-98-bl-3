@@ -548,6 +548,17 @@ li .address:focus {
     gap: 24px;
 }
 
+.label-text-subscribe {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    display: block;
+}
+
 .subscription-input-footer {
     width: 264px;
     height: 40px;
@@ -607,6 +618,8 @@ background-color: rgba(46, 47, 66, 0.4);
 opacity: 0;
 visibility: hidden;
 pointer-events: none;
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+            visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open {
@@ -625,6 +638,10 @@ pointer-events: none;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 72px 24px 24px 24px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn {
@@ -684,6 +701,8 @@ pointer-events: none;
     font-size: 12px;
     color: rgba(142, 143, 153, 1);
     margin-bottom: 4px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
 }
 
 .input-wrapper{
@@ -745,6 +764,9 @@ textarea:hover {
     padding: 8px 16px;
     font-size: 12px;
     color: rgba(46, 47, 66, 0.4)
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    resize: none;
 }
 
 .form-textarea::placeholder {
@@ -790,7 +812,7 @@ input[type="checkbox"]:checked+label>span {
 }
 
 .form-btn {
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     font-family: inherit;
     padding: 16px 32px;
@@ -799,12 +821,14 @@ input[type="checkbox"]:checked+label>span {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
     color: #FFFFFF;
     background-color: #4D5AE5;
     border: none;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px #00000026;
     display: block;
+    cursor: pointer;
     margin: 0 auto;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
